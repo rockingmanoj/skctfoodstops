@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+
+
+
+        <h1>SKCT FOOD STOPS</h1>
+
+        <div class="content">
+
+                <form id="add-cafe-form">
+                        <input type="text" name="name" placeholder="Kadai Peyar">
+                        <input type="text" name="city" placeholder="Kadai Irukum idam">
+    
+                        <button>Add Cafe</button>
+                    </form>
+
+            <ul id="cafe-list"></ul>
+
+        </div>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyAFB1RvMmIlIC1OCidB01irrCg5XkMWSbI",
+              authDomain: "food-stops-at-skct.firebaseapp.com",
+              databaseURL: "https://food-stops-at-skct.firebaseio.com",
+              projectId: "food-stops-at-skct",
+              storageBucket: "food-stops-at-skct.appspot.com",
+              messagingSenderId: "657510677155",
+              appId: "1:657510677155:web:f7bd16180bfb05511b5d16",
+              measurementId: "G-56J2FHMTL4"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+         
+          </script>
+        <script src="app.js"></script>
+        
+    </body>
+</html>
